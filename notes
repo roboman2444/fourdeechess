@@ -1,0 +1,50 @@
+one (or more for multithreading) stacks for instruction.
+zero or more stacks for data (heap, stack, etc are just all stacks).
+
+
+undecided - if datapoints are "deleted" when the stack is popped?
+undecided - if a stack frame remembers all the datapoints that were allocated in it.
+
+example thing
+
+
+push matrix onto stack.
+
+
+push an identity matrix onto stack
+move current data pointer.	\
+drop a data point		|
+move data pointer		 > equivilent of moving the frame pointer down to allocate stack space
+drop a data point		|
+move data pointer		|
+drop a data point		/
+pop from stack (to reset back to where we were)
+
+
+run loop or something, idk
+
+
+
+
+example for loop through indices (very psudocode)
+
+
+push stack1 to start of indice list
+
+loop:
+read stack1 data point -> var i1
+push stack2 to start of item list (again i know)
+move stack2 by offset i1
+read stack2 data (and do what you need to do)
+pop stack2 (should reset to before loop started)
+move stack1 over by 1
+goto loop
+
+//you could also translate stack2 back, but this is the cool way
+
+
+
+
+
+
+undecided - if limited number of data stacks (like 2 per instruction stack)
